@@ -1,19 +1,322 @@
-
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
   <title>Interactive Data Visualization Tutorial</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
   <link rel="stylesheet" href="./style.css">
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+DATA 73200 - INTERACTIVE DATA VISUALIZATION
+Instructor: Eleanor Frymire
+
+CUNY GRADUATE CENTER | 365 5th Ave, New York, NY 10016
+
+MATTHEW STANTON | mstanton@gradcenter.cuny.edu | pingstanton@gmail.com
+https://github.com/pingstanton/ | http://chimaboo.com/coursework/DATA73200
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ADDING CSS CODE IN-LINE FOR THIS EXERCISE; IN PRODUCTION WOULD INSTEAD USE <link rel="stylesheet" href="nypdmap.css"> OR SUCH -->
+<style type="text/css"><!--
+
+body {
+	margin: 0; padding: 10px 15px 20px 15px; 
+	background-color: #e0e0e0);
+	font: normal 1.0em/1.2em arial, helvetica, sans-serif;
+	color: #000;
+	}
+
+a:link {color: #060; text-decoration: none; border-bottom: 0px solid #fff;}
+a:visited {color: #060; text-decoration: none; border-bottom: 0px solid #fff;}
+a:hover  {color: #0c9; text-decoration: none; border-bottom: 0px solid #CC6633;}
+a:active {color: #060; text-decoration: none; border-bottom: 0px solid #fff;}
+
+h1 {margin: 0 0 0.8em 0; padding: 0; font: bold 1.6em/1.0em arial, helvetica, sans-serif; }
+h2 {margin: 0 0 0.8em 0; padding: 0; font: bold 1.4em/1.0em arial, helvetica, sans-serif; }
+h3 {margin: 0 0 0.8em 0; padding: 0; font: bold 1.2em/1.0em arial, helvetica, sans-serif; }
+h4 {margin: 0 0 0.8em 0; padding: 0; font: bold 1.0em/1.0em arial, helvetica, sans-serif; }
+
+.ath {margin: 0.4em 0 2em 0; font: bold 0.8em/1.0em arial, helvetica, sans-serif;}
+
+table {border-collapse: collapse;}
+.offc-hed {
+	padding: 4px 5px 3px 5px; 
+	font: bold 0.8em/1.0em arial, helvetica, sans-serif; 
+	border-bottom: 2px solid #000; 
+	text-align: left;
+	vertical-align: bottom;
+	background-color: #999;
+	color: #fff;
+}
+.year {
+	padding: 4px 5px 3px 5px; 
+	font: bold 0.8em/1.0em arial, helvetica, sans-serif; 
+	border-bottom: 2px solid #000; 
+	text-align: center;
+	vertical-align: bottom;
+	background-color: #999;
+	color: #fff;
+}
+.offc-odd {
+	padding: 4px 5px 3px 5px; 
+	font: bold 0.8em/1.0em arial, helvetica, sans-serif; 
+	text-align: left;
+	vertical-align: center;
+	background-color: #fff;
+	color: #333;
+}
+.offc-evn {
+	padding: 4px 5px 3px 5px; 
+	font: bold 0.8em/1.0em arial, helvetica, sans-serif; 
+	text-align: left;
+	vertical-align: center;
+	background-color: #e0e0e0;
+	color: #333;
+}
+.d-odd {
+	padding: 4px 5px 3px 5px; 
+	font: normal 0.8em/1.0em arial, helvetica, sans-serif; 
+	text-align: right;
+	vertical-align: center;
+	background-color: #fff;
+	color: #333;
+}
+.d-evn {
+	padding: 4px 5px 3px 5px; 
+	font: normal 0.8em/1.0em arial, helvetica, sans-serif; 
+	text-align: right;
+	vertical-align: center;
+	background-color: #e0e0e0;
+	color: #333;
+}
+.offc-total {
+	padding: 4px 5px 3px 5px; 
+	font: bold 0.8em/1.0em arial, helvetica, sans-serif; 
+	text-align: left;
+	vertical-align: center;
+	border-top: 1px solid #000;
+	background-color: #fff;
+	color: #000;
+}
+.d-total {
+	padding: 4px 5px 3px 5px; 
+	font: bold 0.8em/1.0em arial, helvetica, sans-serif; 
+	text-align: right;
+	vertical-align: center;
+	border-top: 1px solid #000;
+	background-color: #fff;
+	color: #000;
+}
+.source {
+	padding: 10px 5px 3px 5px; 
+	font: italic 0.8em/1.0em arial, helvetica, sans-serif; 
+	text-align: right;
+	vertical-align: bottom;
+	background-color: #fff;
+	color: #000;
+}
+
+.rect01 {
+	fill: #f00;
+	}
+.rect02 {
+	fill: #00c;
+	}
+
+
+.subbtn {margin: 0; padding: 7px 30px 5px 30px; 
+	border-radius: 9px;
+	letter-spacing: 3px;
+	font: normal 12px/1.2em arial, helvetica, sans-serif; 
+	color: #5e8cbf; background-color: #fff;
+	border: 2px solid #fff;		
+	-webkit-box-shadow: 3px 3px 15px 5px rgba(0,0,0,0.25); 
+	box-shadow: 3px 3px 15px 5px rgba(0,0,0,0.25);	
+	}
+
+.subbtn:hover {
+	transition: 0.9s;
+	border: 2px solid #009966;		
+	background-color: #009966; color: #fff;
+	-webkit-box-shadow: 3px 3px 15px 5px rgba(0,0,0,0.50); 
+	box-shadow: 3px 3px 15px 5px rgba(0,0,0,0.50);
+}
+
+--></style>
 </head>
 <body>
+
+<h1>1_2_basic_html</h1>
+<div class="ath">Matthew Stanton | <a href="mailto:pingstanton@gmail.com">pingstanton@gmail.com</a></div>
+
+
+<h2>Table Exercise...</h2>
+
+<img src="https://chimaboo.com/coursework/DATA73200/1_2_basic_html/nypdlogo.png" width="350" height="100" alt="NYPD Logo" border="0" />
+<h3>New York City Felony Crime Data By Police Precinct, 2018-2022</h3>
+<h4>Seven Major Felony Offenses</h4>
+<!-- QUESTION: Do you penalize for adding depreciated HTML markup as shown here? -->
+<table width="75%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+	<th width="14%" class="offc-hed">OFFENSE</th>
+	<th width="7%" class="year">2013</th>
+	<th width="7%" class="year">2014</th>
+	<th width="7%" class="year">2015</th>
+	<th width="7%" class="year">2016</th>
+	<th width="7%" class="year">2017</th>
+	<th width="7%" class="year">2018</th>
+	<th width="7%" class="year">2019</th>
+	<th width="7%" class="year">2020</th>
+	<th width="7%" class="year">2021</th>
+	<th width="7%" class="year">2022</th>
+	<th width="14%" class="year">Pct.&nbsp;Of Felonies</th></tr>
+<tr>
+	<td class="offc-odd"><nobr>MURDER&nbsp;&amp;&nbsp;NON-NEGL.&nbsp;MANSLAUGHTER</nobr></td>
+	<td class="d-odd">335</td>
+	<td class="d-odd">333</td>
+	<td class="d-odd">352</td>
+	<td class="d-odd">335</td>
+	<td class="d-odd">292</td>
+	<td class="d-odd">295</td>
+	<td class="d-odd">319</td>
+	<td class="d-odd">468</td>
+	<td class="d-odd">488</td>
+	<td class="d-odd">438</td>
+	<td class="d-odd">0.4%</td>
+</tr>
+<tr>
+	<td class="offc-evn">RAPE</td>
+	<td class="d-evn">1,378</td>
+	<td class="d-evn">1,352</td>
+	<td class="d-evn">1,438</td>
+	<td class="d-evn">1,438</td>
+	<td class="d-evn">1,449</td>
+	<td class="d-evn">1,794</td>
+	<td class="d-evn">1,755</td>
+	<td class="d-evn">1,427</td>
+	<td class="d-evn">1,491</td>
+	<td class="d-evn">1,617</td>
+	<td class="d-evn">1.5%</td>
+</tr>
+<tr>
+	<td class="offc-odd">ROBBERY</td>
+	<td class="d-odd">19,128</td>
+	<td class="d-odd">16,539</td>
+	<td class="d-odd">16,931</td>
+	<td class="d-odd">15,500</td>
+	<td class="d-odd">13,956</td>
+	<td class="d-odd">12,913</td>
+	<td class="d-odd">13,371</td>
+	<td class="d-odd">13,106</td>
+	<td class="d-odd">13,831</td>
+	<td class="d-odd">17,411</td>
+	<td class="d-odd">14.7%</td>
+</tr>
+<tr>
+	<td class="offc-evn">FELONY&nbsp;ASSAULT</td>
+	<td class="d-evn">20,297</td>
+	<td class="d-evn">20,207</td>
+	<td class="d-evn">20,270</td>
+	<td class="d-evn">20,847</td>
+	<td class="d-evn">20,052</td>
+	<td class="d-evn">20,208</td>
+	<td class="d-evn">20,698</td>
+	<td class="d-evn">20,572</td>
+	<td class="d-evn">22,835</td>
+	<td class="d-evn">26,063</td>
+	<td class="d-evn">20.4%</td>
+</tr>
+<tr>
+	<td class="offc-odd">BURGLARY</td>
+	<td class="d-odd">17,429</td>
+	<td class="d-odd">16,765</td>
+	<td class="d-odd">15,125</td>
+	<td class="d-odd">12,990</td>
+	<td class="d-odd">12,083</td>
+	<td class="d-odd">11,687</td>
+	<td class="d-odd">10,783</td>
+	<td class="d-odd">15,478</td>
+	<td class="d-odd">12,811</td>
+	<td class="d-odd">15,746</td>
+	<td class="d-odd">13.6%</td>
+</tr>
+<tr>
+	<td class="offc-evn">GRAND&nbsp;LARCENY</td>
+	<td class="d-evn">45,368</td>
+	<td class="d-evn">43,862</td>
+	<td class="d-evn">44,005</td>
+	<td class="d-evn">44,279</td>
+	<td class="d-evn">43,150</td>
+	<td class="d-evn">43,558</td>
+	<td class="d-evn">43,250</td>
+	<td class="d-evn">35,505</td>
+	<td class="d-evn">40,870</td>
+	<td class="d-evn">51,565</td>
+	<td class="d-evn">41.9%</td>
+</tr>
+<tr>
+	<td class="offc-odd">GRAND&nbsp;LARCENY&nbsp;OF&nbsp;MOTOR&nbsp;VEHICLE</td>
+	<td class="d-odd">7,400</td>
+	<td class="d-odd">7,664</td>
+	<td class="d-odd">7,332</td>
+	<td class="d-odd">6,327</td>
+	<td class="d-odd">5,676</td>
+	<td class="d-odd">5,428</td>
+	<td class="d-odd">5,430</td>
+	<td class="d-odd">9,037</td>
+	<td class="d-odd">10,415</td>
+	<td class="d-odd">13,749</td>
+	<td class="d-odd">7.6%</td>
+</tr>
+<tr>
+	<td class="offc-total">TOTAL</td>
+	<td class="d-total">111,335</td>
+	<td class="d-total">106,722</td>
+	<td class="d-total">105,453</td>
+	<td class="d-total">101,716</td>
+	<td class="d-total">96,658</td>
+	<td class="d-total">95,883</td>
+	<td class="d-total">95,606</td>
+	<td class="d-total">95,593</td>
+	<td class="d-total">102,741</td>
+	<td class="d-total">126,589</td>
+	<td class="d-total">&nbsp;</td>
+</tr>
+<tr>
+	<td colspan="12" class="source">Source: <a href="https://www.nyc.gov/site/nypd/stats/crime-statistics/historical.page" title="Click for data source files / New York Police Department's Historical New York City Crime Data">New York Police Department's Historical New York City Crime Data</a></td>
+</tr>
+</table>
+
+<h2>SVG exercise...</h2>
+
+<svg viewBox="0 0 110 30" xmlns="http://www.w3.org/2000/svg">
+  <rect width="25" height="25" class="rect01" />
+  <rect x="30" width="50" height="25" rx="10" class="rect02" />
+</svg>
+
+<h2>Form exercise...</h2>
+
+<form>
+<p>What is the how where now?</p>
+<p><input size="30" type="text" name="field01" /></p>
+<button class="subbtn">Submit Answer</button>
+
+</form>
+
+<!-- ORIGINAL SAMPLE HTML -->
+<!--
+
   <h1>Hello World!</h1>
   <h3>Section 1 | Tutorial 2 | Basic HTML</h3>
   <table>
-    <!-- Add your table data here -->
+    < !-- Add your table data here -- >
   </table>
   <svg>
-    <!-- Add your rectangles in here -->
+    < !-- Add your rectangles in here -- >
   </svg>
+
+-->
+
 </body>
 </html>
