@@ -17,9 +17,106 @@ h4 {margin: 0 0 0.8em 0; padding: 0; font: bold 1.0em/1.0em arial, helvetica, sa
 
 .ath {margin: 0.4em 0 2em 0; font: bold 0.8em/1.6em arial, helvetica, sans-serif;}
 
-cite {
-	margin: 2px; padding: 8px; 
-	font: normal 1.0em/1.2em courier, 'courier new', monospace;
+table {border-collapse: collapse;}
+.offc-hed {
+	padding: 4px 5px 3px 5px; 
+	font: bold 0.8em/1.0em arial, helvetica, sans-serif; 
+	border-bottom: 2px solid #000; 
+	text-align: left;
+	vertical-align: bottom;
+	background-color: #999;
+	color: #fff;
+}
+.year {
+	padding: 4px 5px 3px 5px; 
+	font: bold 0.8em/1.0em arial, helvetica, sans-serif; 
+	border-bottom: 2px solid #000; 
+	text-align: center;
+	vertical-align: bottom;
+	background-color: #999;
+	color: #fff;
+}
+.offc-odd {
+	padding: 4px 5px 3px 5px; 
+	font: bold 0.8em/1.0em arial, helvetica, sans-serif; 
+	text-align: left;
+	vertical-align: center;
+	background-color: #fff;
+	color: #333;
+}
+.offc-evn {
+	padding: 4px 5px 3px 5px; 
+	font: bold 0.8em/1.0em arial, helvetica, sans-serif; 
+	text-align: left;
+	vertical-align: center;
 	background-color: #e0e0e0;
 	color: #333;
+}
+.d-odd {
+	padding: 4px 5px 3px 5px; 
+	font: normal 0.8em/1.0em arial, helvetica, sans-serif; 
+	text-align: right;
+	vertical-align: center;
+	background-color: #fff;
+	color: #333;
+}
+.d-evn {
+	padding: 4px 5px 3px 5px; 
+	font: normal 0.8em/1.0em arial, helvetica, sans-serif; 
+	text-align: right;
+	vertical-align: center;
+	background-color: #e0e0e0;
+	color: #333;
+}
+.offc-total {
+	padding: 4px 5px 3px 5px; 
+	font: bold 0.8em/1.0em arial, helvetica, sans-serif; 
+	text-align: left;
+	vertical-align: center;
+	border-top: 1px solid #000;
+	background-color: #fff;
+	color: #000;
+}
+.d-total {
+	padding: 4px 5px 3px 5px; 
+	font: bold 0.8em/1.0em arial, helvetica, sans-serif; 
+	text-align: right;
+	vertical-align: center;
+	border-top: 1px solid #000;
+	background-color: #fff;
+	color: #000;
+}
+.source {
+	padding: 10px 5px 3px 5px; 
+	font: italic 0.8em/1.0em arial, helvetica, sans-serif; 
+	text-align: right;
+	vertical-align: bottom;
+	background-color: #fff;
+	color: #000;
+}
+
+.rect01 {
+	fill: #f00;
+	}
+.rect02 {
+	fill: #00c;
+	}
+
+
+.subbtn {margin: 0; padding: 7px 30px 5px 30px; 
+	border-radius: 9px;
+	letter-spacing: 3px;
+	font: normal 12px/1.2em arial, helvetica, sans-serif; 
+	color: #5e8cbf; background-color: #fff;
+	border: 2px solid #fff;		
+	-webkit-box-shadow: 3px 3px 15px 5px rgba(0,0,0,0.25); 
+	box-shadow: 3px 3px 15px 5px rgba(0,0,0,0.25);	
+	}
+
+.subbtn:hover {
+	transition: 0.9s;
+	border: 2px solid #009966;		
+	background-color: #009966; color: #fff;
+	-webkit-box-shadow: 3px 3px 15px 5px rgba(0,0,0,0.50); 
+	box-shadow: 3px 3px 15px 5px rgba(0,0,0,0.50);
 }
