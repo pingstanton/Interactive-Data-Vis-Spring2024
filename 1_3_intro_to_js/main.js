@@ -14,6 +14,9 @@ function updateCount() {
 	else if (count > 1) {
 		clickCount.textContent = "The button has now been clicked " + count + " times.";
 		}
+	if (count === 13) {
+		clickCount.textContent = "OH DEAR GOD NO, THE BUTTON HAS BEEN CLICKED " + count + " TIMES! WHY ARE YOU CLICKING THIS BUTTON?";
+		}
 	}
 
 // increase count function...
