@@ -2,9 +2,11 @@
 CONSTANTS AND GLOBALS 
 */
 const width = window.innerWidth *.9; /* 90% of display width */
-const height = 300; /* 300 units height */
+const height = 300; /* shortened to 300 units height */
 const wmargin = 80; /* split width and height margins from original example */
 const hmargin = 20;
+
+
 
 /* 
 LOAD DATA
@@ -58,6 +60,16 @@ discrete values (10, 20, 30, ...).
 		.style("font-size","14px");
 
     const xAxis = d3.axisBottom(xScale)
+	/*	IDEA: RESPONSIVE X AXIS LABELS?
+		number of x axis divisions to mark, divided into xScale max;
+		reduce number of ticks if display window under set thresholds */
+	console.log("Display width = ", window.innerWidth, "pixels")
+	if (window.innerWidth > "1200") {
+		xAxis.ticks(20);
+	} else if (window.innerWidth > "700") {
+		xAxis.ticks(10);
+	} else {
+		xAxis.ticks(5);} 
     svg.append("g")
 		.attr("transform", `translate(0,${height - hmargin})`)
 		.call(xAxis)
@@ -71,7 +83,6 @@ discrete values (10, 20, 30, ...).
 		.attr("x", wmargin+5) /* align a 5px smidge right of horizontal axis */
 		.attr("height", yScale.bandwidth()) /* set consistent height to each bar */
 		.attr("width", d => xScale(d.Count) - wmargin) /* set width to match Count value */
-		.attr("fill", d => d.Count > 1000 ? "#f2b501" : d.Count > 900 ? "#ebaa00" : d.Count > 800 ? "#d08500" : d.Count > 700 ? "#e29d00" : d.Count > 800 ? "#d08500" : d.Count > 700 ? "#bb6c00" : d.Count > 500 ? "#ab5a00" : "#8e4700")
 		/*
 
 		Because of the disproportionate weight of Americans in the Count, the
@@ -81,6 +92,7 @@ discrete values (10, 20, 30, ...).
  
 		.attr("fill", d => colorScale(d.Count)) /* set fill color based on the count 
 		*/
+		.attr("fill", d => d.Count > 1000 ? "#edb000" : d.Count > 600 ? "#d79000" : d.Count > 300 ? "#a16100" : d.Count > 150 ? "#794100" : "#000000")
 
 /* TEXT LABELS FOR BARS */
 
