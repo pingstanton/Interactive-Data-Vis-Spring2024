@@ -21,3 +21,17 @@ p {font-size: 1em;}
 
 .label {font-weight: bold;}
 .container {margin: 0; padding: 0 5px;}
+#rawData {margin: 100px 0 0 0; padding: 0;}
+#rawData h3 {color: #666; font: bold 0.8em/1.0em arial, helvetica, sans-serif;}
+
+table {margin: 10px 0; padding: 0; border-collapse: collapse;}
+th, td {
+	padding: 4px 8px; 
+	border: 1px solid #dddddd;
+	font: normal 0.9em/1.2em arial, helvetica, sans-serif;
+	text-align: left;
+    }
+th {font-weight: bold; background-color: #dddddd;}
+/* a better way to alternate row shading found on Stack Overflow */
+tr:nth-child(odd) {background-color: #ffffff;}
+tr:nth-child(even) {background-color: #eeeeee;}
