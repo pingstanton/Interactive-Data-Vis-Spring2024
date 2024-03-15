@@ -15,7 +15,8 @@ seems to automatically read first record as name for fields
 */
 d3.csv('../data/MoMA_topTenNationalities.csv', d3.autoType)
 	.then(data => {
-    console.log("data", data) /* preview loaded records in console */
+const filename = "MoMA_topTenNationalities.csv";
+   console.log("data", data) /* preview loaded records in console */
 	console.log("Number of records:", data.length); /* count records in data source */
 /* 
 unchanged from previous code 
@@ -108,6 +109,46 @@ discrete values (10, 20, 30, ...).
 		.text(d => d.Count) /* text content (Count values) */
 		.attr("fill", d => d.Count > 500 ? "#ffffff" : "#999999")
 		.style("font-size", "12px"); /* font size */
+
+
+
+/* ADDING TABLE TO VIEW RAW SOURCE DATA ON PAGE */
+/* 
+Prof. Frymire: Obviously this part wasn't in the assignment spec, 
+I'm just adding it in for myself as reference. I found the 
+tr:nth-child(odd) / tr:nth-child(even) CSS trick on Stack Overflow
+while debugging this code, seems way easier than the way I used 
+to do it with manually/scripting class="odd"/class="evn" on 
+individual <tr> and <td> cells...
+*/
+
+	/* label above table */
+	const rawData = d3.select("#rawData"); /* whole group wrapped in div #rawData ID on HTML page */
+	rawData.selectAll("h3")
+		.html("source data:<br />" + filename); /* const filename was declared above; using .html() instead of .text() to make the <br /> work */
+
+	/* column headers from record[0] keys */
+	const thead = d3.select("#sourceData thead");
+	const hedRow = thead.selectAll("tr")
+		.data([data[0]]) /* only bind the first data record once to the th row */
+		.join("tr");
+	hedRow.selectAll("th")
+		.data(d => Object.keys(d)) /* for each first data record field as header keys */
+		.enter()
+		.append("th")
+		.text(d => d);
+
+	/* record [0] to record [n] as table rows */
+	const tbody = d3.select("#sourceData tbody");
+	const rows = tbody.selectAll("tr")
+		.data(data)
+		.join("tr");
+	rows.selectAll("td")
+		.data(d => Object.values(d))
+		.join("td")
+		.text(d => d);
+
+/* END ADDING TABLE TO VIEW RAW SOURCE DATA ON PAGE */
 
 
 
