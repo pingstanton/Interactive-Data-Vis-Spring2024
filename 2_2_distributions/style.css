@@ -1,19 +1,39 @@
 body {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
-  padding: 1em;
-}
+	margin: 0; padding: 10px 15px 20px 15px; 
+	background-color: #e0e0e0);
+	font: normal 1.0em/1.2em arial, helvetica, sans-serif;
+	color: #000;
+	}
 
-h1 {
-  font-size: 3em;
-  margin: 0.25em 0;
-}
+a:link {color: #060; text-decoration: none; border-bottom: 0px solid #fff;}
+a:visited {color: #060; text-decoration: none; border-bottom: 0px solid #fff;}
+a:hover {color: #0c9; text-decoration: none; border-bottom: 0px solid #CC6633;}
+a:active {color: #060; text-decoration: none; border-bottom: 0px solid #fff;}
 
-h3 {
-  font-size: 2em;
-  margin: 0.25em 0;
-}
+h1 {margin: 0 0 0.8em 0; padding: 0; font: bold 1.6em/1.0em arial, helvetica, sans-serif; }
+h2 {margin: 0 0 0.8em 0; padding: 0; font: bold 1.4em/1.0em arial, helvetica, sans-serif; }
+h3 {margin: 0 0 0.8em 0; padding: 0; font: bold 1.2em/1.0em arial, helvetica, sans-serif; }
+h4 {margin: 0 0 0.8em 0; padding: 0; font: bold 1.0em/1.0em arial, helvetica, sans-serif; }
 
-p {
-  font-size: 1em;
-}
+.ath {margin: 0.4em 0 2em 0; font: bold 0.8em/1.6em arial, helvetica, sans-serif;}
+
+p {font-size: 1em;}
+
+.label {font-weight: bold;}
+.artist-text {padding: 0 0 0 5px; font: normal 10px/1.0em arial, helvetica, sans-serif; color: #666;}
+.container {margin: 0; padding: 0 5px;}
+#explainer {margin: 0; padding: 0 0 0 60px; font: normal 0.8em/1.0em arial, helvetica, sans-serif; color: #777777;}
+#rawData {margin: 100px 0 0 0; padding: 0;}
+#rawData h3 {color: #666; font: bold 0.8em/1.0em arial, helvetica, sans-serif;}
+
+table {margin: 10px 0; padding: 0; border-collapse: collapse;}
+th, td {
+	padding: 4px 8px; 
+	border: 1px solid #dddddd;
+	font: normal 0.9em/1.2em arial, helvetica, sans-serif;
+	text-align: left;
+    }
+th {font-weight: bold; background-color: #dddddd;}
+/* a better way to alternate row shading found on Stack Overflow */
+tr:nth-child(odd) {background-color: #ffffff;}
+tr:nth-child(even) {background-color: #eeeeee;}
