@@ -42,17 +42,17 @@ FIELDS (COLUMNS)
 */
 
 /* CONSTANTS AND GLOBALS */
-	const width = window.innerWidth * 0.8, /* using 80% width of display area */
-	height = 400; /* fixed to 400 units height */
+	const width = window.innerWidth * 0.9, /* using 90% width of display area */
+	height = 500; /* fixed units height */
 	// height = window.innerHeight * 0.8, /* using 80% width of display area */
-	margin = { top: 20, bottom: 60, left: 80, right: 60 },
-	radius = 5;
+	margin = { top: 20, bottom: 60, left: 120, right: 30 },
+	radius = 5; /* this variable gets ignored below in favor of d => lifespan(d["Artist Lifespan"]) */
 
 /* LOAD DATA */
 
 	d3.csv("../data/MoMA_distributions_cleaned.csv", d3.autoType)
 		.then(data => {	
-		const filename = "MoMA_distributions-cleaned.csv";	
+		const filename = "MoMA_distributions-cleaned.csv"; /* used on extra raw data table */
 		console.log("data", data) /* preview loaded records in console */
 		console.log("Number of records: ", data.length); /* count records in data source */
 
