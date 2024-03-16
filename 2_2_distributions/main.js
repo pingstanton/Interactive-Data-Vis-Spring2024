@@ -76,8 +76,8 @@ FIELDS (COLUMNS)
 		.range([3, 9])
 
 	const colorScale = d3.scaleOrdinal()
-		.domain(["(Male)", "(Female)"])
-		.range(["#eb4e3e", "#1d847e"]) /* using gender colors from The Economist */
+		.domain(["(Male)", "(Female)", "()"])
+		.range(["#eb4e3e", "#1d847e", "#333333"]) /* using gender colors from The Economist */
 		/* https://www.economist.com/leaders/2018/04/07/how-to-narrow-britains-gender-pay-gap */
 
 		/* see Lisa Charlotte Muth's blog post: https://blog.datawrapper.de/gendercolor/ */
