@@ -1,5 +1,22 @@
 /* ASSIGNMENT...
 
+Questions on this exercise...
+
+1.) I flipped the x/y axis so that "width" lay on the x axis, 
+but depending on how these pieces are displayed at MoMA,
+should I have kept the original orientation (x = height, y = width)?
+
+2.) I didn't like that in the original x/y scale did not match
+given they share the same unit of measure (centimeters), so I
+mocked up a version where height cm and width cm displayed on
+each axis the same. However, doing so will break how the overall
+visualization fits on a web page (it's way too high). Options?
+
+*/
+
+
+/* ASSIGNMENT...
+
 * Implement your own scatter plot with the MoMA distributions dataset. 
 It is already referenced in your template. 
 Your dataset should visualize length and width.
@@ -73,7 +90,7 @@ FIELDS (COLUMNS)
 	const filteredData = data.filter(d => d["Artist Lifespan"] > 1 && d["Artist Lifespan"] <= 100);
 	const lifespan = d3.scaleLinear()
 		.domain([0, d3.max(filteredData, d => d["Artist Lifespan"])])
-		.range([3, 9])
+		.range([2, 9])
 
 	const colorScale = d3.scaleOrdinal()
 		.domain(["(Male)", "(Female)", "()"])
