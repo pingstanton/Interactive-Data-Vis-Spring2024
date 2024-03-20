@@ -26,7 +26,7 @@ p {font-size: 1em;}
 
 .label {font-weight: bold;}
 .artist-text {padding: 0 0 0 5px; font: normal 10px/1.0em arial, helvetica, sans-serif; color: #666;}
-.container {margin: 0; padding: 0 5px;}
+#container {margin: 0; padding: 0 5px;}
 #explainer {margin: 0; padding: 0 0 0 60px; font: normal 0.8em/1.0em arial, helvetica, sans-serif; color: #777777;}
 #rawData {margin: 100px 0 0 0; padding: 0;}
 #rawData h3 {color: #666; font: bold 0.8em/1.0em arial, helvetica, sans-serif;}
