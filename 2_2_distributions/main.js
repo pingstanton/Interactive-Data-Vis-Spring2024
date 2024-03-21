@@ -1,60 +1,29 @@
-/* ASSIGNMENT...
+/* Section 2 | Tutorial 2 | Distributions
+Tutorial Assignment, see:
+https://github.com/InteractiveDataVis/Interactive-Data-Vis-Spring2024/blob/main/2_2_distributions/README.md
+*/
 
-Questions on this exercise...
+/* DATA 73200 - INTERACTIVE DATA VISUALIZATION
+Instructor: Eleanor Frymire
+
+CUNY GRADUATE CENTER | 365 5th Ave, New York, NY 10016
+
+MATTHEW STANTON | mstanton@gradcenter.cuny.edu | pingstanton@gmail.com
+https://github.com/pingstanton/ | http://chimaboo.com/coursework/DATA73200
+
+*/
+
+/* QUESTIONS...
 
 1.) I flipped the x/y axis so that "width" lay on the x axis, 
 but depending on how these pieces are displayed at MoMA,
 should I have kept the original orientation (x = height, y = width)?
 
-2.) I didn't like that in the original x/y scale did not match
+2.) I didn't like the original x/y scale that did not match display,
 given they share the same unit of measure (centimeters), so I
 mocked up a version where height cm and width cm displayed on
 each axis the same. However, doing so will break how the overall
 visualization fits on a web page (it's way too high). Options?
-
-*/
-
-
-/* ASSIGNMENT...
-
-* Implement your own scatter plot with the MoMA distributions dataset. 
-It is already referenced in your template. 
-Your dataset should visualize length and width.
-
-* Size the dots by the artist lifespan. 
-This requires creating a new scale. 
-Carefully consider the domain and range of this new scale, 
-and do your best to make the domain of the scale dynamic 
-(i.e. would the scale still work if the data changed?). 
-Make a design decision to handle the 0 values.
-
-* Make intentional design decisions -- colors, sizes, axes, etc. 
-should illustrate something interesting about or relevant to your data.
-
-BONUS:
-
-* Add a label to each dot using the same method in which we appended them. 
-HINT: you can either append one group that is positioned that includes 
-both the circle and the label, or you can append all circles, 
-then all labels.
-
-* Play with your understanding of the SVG coordinate system by using 
-transform: translate(x, y) to position your dots instead of cx and cy. 
-Can you think of any benefits of this method?
-
-FIELDS (COLUMNS)
-0: "Title"
-1: "Artist"
-2: "ConstituentID"
-3: "ArtistBio"
-4: "Nationality"
-5: "BeginDate"
-6: "EndDate"
-7: "Artist Lifespan"
-8: "Gender"
-9: "Date"
-10: "Length (cm)"
-11:"Width (cm)"
 
 */
 
