@@ -1,3 +1,18 @@
+/* Section 2 | Tutorial 1 | Quantities and Amounts
+Tutorial Assignment, see:
+https://github.com/InteractiveDataVis/Interactive-Data-Vis-Spring2024/blob/main/2_1_quantities_and_amounts/README.md
+*/
+
+/* DATA 73200 - INTERACTIVE DATA VISUALIZATION
+Instructor: Eleanor Frymire
+
+CUNY GRADUATE CENTER | 365 5th Ave, New York, NY 10016
+
+MATTHEW STANTON | mstanton@gradcenter.cuny.edu | pingstanton@gmail.com
+https://github.com/pingstanton/ | http://chimaboo.com/coursework/DATA73200
+
+*/
+
 /* 
 CONSTANTS AND GLOBALS 
 */
