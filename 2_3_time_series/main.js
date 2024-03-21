@@ -1,6 +1,6 @@
  /* CONSTANTS AND GLOBALS */
  	const width = window.innerWidth * 0.95,
- 	height = window.innerHeight * 0.7,
+ 	height = window.innerHeight * 0.8,
  	margin = { top: 5, bottom: 20, left: 0, right: 60 }
 	indent = 10
 
@@ -34,7 +34,7 @@
 		.range([margin.right, width - margin.left])
 
 	const yScale = d3.scaleLinear()
-	 	.domain([0, d3.max(data, d => d.ActorAge)]) // Ensure the domain starts from zero
+	 	.domain([0, d3.max(data, d => d.ActorAge+5)]) // Ensure the domain starts from zero
 	 	.range([height - margin.bottom, margin.top]);
 
 /* CREATE SVG ELEMENT */
@@ -91,7 +91,7 @@
 		.join("path")
 		.attr("class", "area")
 		.attr("fill", "#cc0000")
-		//.attr("fill", "#b6c5e4") /* ligher blue */
+
 		.attr("d", (areaGenJB(data)));
 
 	svgJB.selectAll(".actor-label")
