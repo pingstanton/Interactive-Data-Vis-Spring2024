@@ -9,7 +9,7 @@ Instructor: Eleanor Frymire
 CUNY GRADUATE CENTER | 365 5th Ave, New York, NY 10016
 
 MATTHEW STANTON | mstanton@gradcenter.cuny.edu | pingstanton@gmail.com
-https://github.com/pingstanton/ | http://chimaboo.com/coursework/DATA73200
+https://github.com/pingstanton/ 
 
 */
 
