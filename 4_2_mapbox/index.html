@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-  <head>
-    <meta charset="utf-8">
-    <title>Interactive Data Visualization Tutorial</title>
+<head>
+<meta charset="utf-8">
+<title>4_2_mapbox</title>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+DATA 73200 - INTERACTIVE DATA VISUALIZATION
+Instructor: Eleanor Frymire
+
+CUNY GRADUATE CENTER | 365 5th Ave, New York, NY 10016
+
+MATTHEW STANTON | mstanton@gradcenter.cuny.edu | pingstanton@gmail.com
+https://github.com/pingstanton/ | http://chimaboo.com/coursework/DATA73200
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
-  </head>
-  <body>
-    <h3>Section 4 | Tutorial 2 | Mapbox</h3>
-    <div id="container"> </div>
-    <script src="../lib/d3.js"></script>
+</head>
+<body>
+<div class="top"><h1>4_2_mapbox</h1>
+<div class="ath">Matthew Stanton | <a href="mailto:pingstanton@gmail.com">pingstanton@gmail.com</a><br />
+committed code repository: <a href="https://github.com/pingstanton/Interactive-Data-Vis-Spring2024/tree/main/4_2_mapbox">https://github.com/pingstanton/Interactive-Data-Vis-Spring2024/tree/main/4_2_mapbox/</a><br />
+deployed example: <a href="https://pingstanton.github.io/Interactive-Data-Vis-Spring2024/4_2_mapbox/index.html">https://pingstanton.github.io/Interactive-Data-Vis-Spring2024/4_2_mapbox/index.html</a><br />
+</div></div>
+<div class="title">
+<h1>Marvel Universe Atlas (mix of MCU and comics lore)</h1>
+<p>NYC area by default; zoom out for global locations</p></div>
+    <div id='map' style='width: 100%; height: 800px;'></div>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
     <script src="main.js"></script>
   </body>
 </html>
